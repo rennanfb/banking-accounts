@@ -128,14 +128,28 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Account.cpp" />
-    <ClCompile Include="Banking.cpp" />
+    <ClCompile Include="Authenticable.cpp" />
+    <ClCompile Include="Cashier.cpp" />
+    <ClCompile Include="CurrentAccount.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Cpf.cpp" />
+    <ClCompile Include="Employee.cpp" />
     <ClCompile Include="Holder.cpp" />
+    <ClCompile Include="Manager.cpp" />
+    <ClCompile Include="Person.cpp" />
+    <ClCompile Include="SavingAccount.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account.hpp" />
+    <ClInclude Include="Authenticable.hpp" />
+    <ClInclude Include="Cashier.hpp" />
     <ClInclude Include="Cpf.hpp" />
+    <ClInclude Include="CurrentAccount.hpp" />
+    <ClInclude Include="Employee.hpp" />
     <ClInclude Include="Holder.hpp" />
+    <ClInclude Include="Manager.hpp" />
+    <ClInclude Include="Person.hpp" />
+    <ClInclude Include="SavingAccount.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

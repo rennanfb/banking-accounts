@@ -26,11 +26,15 @@ void Account::withdraw(float withdrawAmount)
 		std::cout << "Invalid Amount to withdraw";
 		return;
 	}
-	if (withdrawAmount > balance) {
+
+	float withdrawFare = withdrawAmount * withdrawTax();
+	float discountedAmount = withdrawAmount + withdrawFare;
+
+	if (discountedAmount > balance) {
 		std::cout << "Not enought balance to withdraw this amount." << std::endl;
 		return;
 	}
-	balance -= withdrawAmount;
+	balance -= discountedAmount;
 }
 
 void Account::deposit(float depositAmount) 
@@ -41,7 +45,7 @@ void Account::deposit(float depositAmount)
 	balance += depositAmount;
 }
 
-std::string Account::getNumber() 
+std::string Account::getNumber() const
 {
 	return number;
 }
@@ -51,12 +55,12 @@ float Account::getBalance() const
 	return balance;
 }
 
-std::string Account::getHolderName() 
+std::string Account::getHolderName() const 
 {
 	return holder.getName();
 }
 
-std::string Account::getHolderCpf() 
+std::string Account::getHolderCpf() const
 {
 	return holder.getCpf();
 }

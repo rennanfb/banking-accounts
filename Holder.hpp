@@ -1,14 +1,14 @@
 #pragma once
 #include <string>
 #include "Cpf.hpp"
+#include "Person.hpp"
+#include "Authenticable.hpp"
 
-class Holder {
-private:
-	std::string name;
-	Cpf cpf;
+class Holder : public Person, public Authenticable {
 public:
-	explicit Holder(std::string name, Cpf cpf);
-	std::string getName();
-	std::string getCpf();
+	Holder(Cpf cpf, std::string name, std::string password);
+
+	std::string getCpf() const;
+	std::string getName() const;
 };
 

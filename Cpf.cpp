@@ -6,7 +6,7 @@ Cpf::Cpf(std::string number):
 
 }
 
-std::string Cpf::getNumber() 
+std::string Cpf::getNumber() const
 {
 	return number;
 }

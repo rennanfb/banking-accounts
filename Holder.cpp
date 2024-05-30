@@ -1,19 +1,17 @@
 #include "Holder.hpp"
 #include "Cpf.hpp"
 
-Holder::Holder(std::string name, Cpf cpf) :
-	name(name),
-	cpf(cpf)
+Holder::Holder(Cpf cpf, std::string name, std::string password) :
+	Person(cpf, name),
+	Authenticable(password)
 {
 
 }
 
-std::string Holder::getName() 
-{
-	return name;
-}
-
-std::string Holder::getCpf() 
-{
+std::string Holder::getCpf() const {
 	return cpf.getNumber();
+}
+
+std::string Holder::getName() const {
+	return name;
 }

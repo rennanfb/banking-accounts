@@ -6,7 +6,8 @@ class Cpf
 private:
 	std::string number;
 public:
-	Cpf(std::string number);
-	std::string getNumber();
+	explicit Cpf(std::string number);
+
+	std::string getNumber() const;
 };
 
